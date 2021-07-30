@@ -7,17 +7,17 @@
 
           <div class="form-group">
             <label for="usuario">Usuário</label>
-            <input class="form-control" type="text" name="usuario" id="usuario"
+            <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario" id="usuario"
             placeholder="Nome de usuário ou email" />
           </div>
           <div class="form-group">
             <label for="senha">Senha</label>
-            <input class="form-control" type="passowrd" name="senha" id="senha"
+            <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" id="senha"
             placeholder="Senha" />
           </div>
 
           <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-dark">
+            <button type="submit" class="btn btn-dark" (click)='entrar()'>
               Entrar
             </button>
           </div>
