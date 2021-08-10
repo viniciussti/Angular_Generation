@@ -36,7 +36,6 @@
 
       <a (click)='findByIdUser()'  class="nav-item nav-link text-secondary font-weight-bold" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
 
-
       <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por tema</a>
 
     </div>
@@ -45,6 +44,7 @@
   <div class="tab-content mt-5" id="nav-tabContent">
 
     <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
+
       <div class="card-columns">
         <div class="card text-center" *ngFor='let item of listaPostagens'>
           <div class="card-body">
@@ -61,9 +61,11 @@
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
+
       <div class="card-columns">
         <div class="card text-center" *ngFor='let item of user.postagem'>
           <div class="card-body">
@@ -81,6 +83,8 @@
     </div>
 
     <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
+
+
       <div class="card-columns" *ngFor='let tema of listaTemas'>
         <div class="card text-center" *ngFor='let item of tema.postagem'>
           <div class="card-body">
@@ -97,12 +101,17 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
 </div>
 
-<!-- Modal -->
+
+
+
+
+<!-- Modal - . -->
 <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
