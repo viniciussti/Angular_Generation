@@ -27,5 +27,13 @@ export class PostagemService {
     return this.http.get<Postagem>(`https://blogpessoalteixeira.herokuapp.com/postagem/${id}`)
   }
 
+  putPostagem(postagem: Postagem): Observable<Postagem>{
+    return this.http.put<Postagem>('https://blogpessoalteixeira.herokuapp.com/postagem', postagem)
+  }
+
+  deletePostagem(id: number){
+    return this.http.delete(`https://blogpessoalteixeira.herokuapp.com/postagem/${id}`)
+  }
+
 
 }
